@@ -1,6 +1,7 @@
 const holes = document.querySelectorAll('.hole');
 const scoreBoard = document.querySelector('.score');
 const moles = document.querySelectorAll('.mole');
+const startBtn = document.querySelector('.btn');
 let lastHole; // to not repeat a prev hole
 let timeup = false; // complete runtime of the game
 
@@ -51,7 +52,9 @@ function startGame(){
   scoreBoard.textContent = 0;
   timeup = false;
   molePeep();
-  setTimeout(() => timeup = true, 10000); // changing the timeup bool on ending the run time
+  setTimeout(() => {
+    timeup = true
+  }, 10000); // changing the timeup bool on ending the run time
 
 }
 
